@@ -36,19 +36,19 @@ https://stackoverflow.com/questions/71301895/codesignal-mutate-array
 */
 
 
-function mutateTheArray(n, a) {
-    let b = [];
+function mutateTheArray(n, RealArr) {
+    let newArr = [];
 
     for (let i=0; i <= n-1; i++) {
         if (i==0) {
-            b[0] = a[0] + a[1];
+            newArr[0] = RealArr[0] + RealArr[1];
         } else if (i == n-1) { // <- here
-            b[i] = a[i-1] + a[i];
+            newArr[i] = RealArr[i-1] + RealArr[i];
         } else {
-            b[i] = a[i-1] + a[i] + a[i+1];
+            newArr[i] = RealArr[i-1] + RealArr[i] + RealArr[i+1];
         }
     }
-    return b;
+    return newArr;
 }
 console.log(mutateTheArray(5, [4, 0, 1, -2, 3]));
 
