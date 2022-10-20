@@ -58,4 +58,4 @@
     
     https://leetcode.com/problems/valid-parentheses/discuss/603002/Python-3-simple-scanning-with-loop
       
-      """ 
+      """  
