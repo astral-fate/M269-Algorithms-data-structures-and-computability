@@ -25,3 +25,40 @@ def longestConsecutive(nums):
 
 nums = [0,3,7,2,5,8,4,6,0,1]
 print(longestConsecutive(nums))
+
+
+
+
+
+
+def longestConsecutive(nums):
+  arr = []
+  j=0
+  nums.sort()
+  for i in range(0,len(nums)):
+     
+     
+      
+      if nums[i] == nums[i]+1:
+          nums.pop(i)
+          
+      
+      
+      if nums[i] in range(0,nums[-1]):
+          if nums[i]+1:
+              arr.append(i)
+              
+              
+      
+  return len(arr)   
+  
+      
+# Python3 program to find longest
+# contiguous subsequence
+
+# Returns length of the longest
+# contiguous subsequence
+
+
+nums = [0,3,7,2,5,8,4,6,0,1]
+print(longestConsecutive(nums))
