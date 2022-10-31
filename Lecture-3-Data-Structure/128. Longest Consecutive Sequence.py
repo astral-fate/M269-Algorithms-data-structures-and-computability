@@ -126,3 +126,28 @@ nums = [0,3,7,2,5,8,4,6,0,1]
 
 
 print(longestConsecutive(nums))
+
+##fifth attempt
+
+def longestConsecutive(nums):
+
+  nums.sort()
+  arr = []
+  j=0
+
+  if len(nums)==1:
+    arr.append(1)
+
+  for i in range(0,len(nums)-1):
+
+      if nums[j]==nums[j+1]:
+              nums.pop(j) 
+      if (nums[j]+i==nums[j+i]):
+              arr.append(nums[i])      
+  return len(arr)    
+    
+
+nums = [1,0,2,3,5]
+#nums = [0]
+
+print(longestConsecutive(nums))
